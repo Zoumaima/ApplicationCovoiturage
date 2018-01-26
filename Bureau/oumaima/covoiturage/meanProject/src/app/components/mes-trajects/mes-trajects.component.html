@@ -1,0 +1,100 @@
+<div class="container" style="text-align:center" >
+  <div class="row">
+  <div class="col-md-12">
+<div class="panel panel-success">
+<div class="panel-heading">
+<h3 class="panel-title">Mes trajects</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<form role="form"  >
+<table class="table table-bordered">
+<thead>
+
+<tr>
+
+<th>Ville depart</th>
+<th>Ville d'arrivée</th>
+<th>Adresse de départ</th>
+<th>Adresse d'arrivée</th>
+
+<th>Date de  depart</th>
+<th>Heure de depart </th>
+<th> place demandé </th>
+
+<th> prix </th>
+<th> Action </th>
+
+
+
+
+
+
+
+
+
+</tr>
+</thead>
+<tbody>
+
+<tr *ngFor="let traject of trajects" >
+<td>
+  {{traject.villeD}}
+</td>
+
+<td>
+  {{traject.villeA}}
+</td>
+<td>
+  {{traject.adresse_depart}}
+
+</td>
+<td>
+  {{traject.adresse_arrivee}}
+
+</td>
+
+
+<td>
+
+  {{traject.date_depart | date : shortDate }}
+
+</td>
+<td>
+
+  {{traject.heure_depart}}
+
+</td>
+
+
+<td>
+
+  {{traject.nbr_place}}
+
+</td>
+
+<td>
+
+  {{traject.prix}}
+
+</td>
+
+
+<td>
+  <button (click)="onDeleteSubmit(traject._id)" class="btn btn-danger">Supprimer</button>
+
+</td>
+</tr>
+
+
+
+
+
+
+
+</tbody>
+</table>

@@ -1,0 +1,88 @@
+<!-- <nav class="navbar navbar-light" style="background-color: #363636;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" [routerLink]="['/']" style="color: white;"> <strong>Covoiturage</strong></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/']" style="color: #f3cd4c;"><strong>Home</strong></a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li *ngIf="authService.loggedIn()"  [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/dashboard']" style="color: #f3cd4c;">Dashboard </a></li>
+            <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/profile']" style="color: #f3cd4c;">Profile</a></li>
+
+            <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/login']" style="color: #f3cd4c;">Login</a></li>
+            <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/register']" style="color: #f3cd4c;">Register</a></li>
+
+            <li *ngIf="authService.loggedIn()" ><a (click)="onLogoutClick()"href="#" style="color: #f3cd4c;">Logout</a></li>
+ 
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      <!-- </div>
+    </nav> --> 
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- C'est ce que j'ai pu faire ce soir quand j'ai pas pu dormir, i've done it with love <3 -->
+
+<style>
+      .navbar { 
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: #5E4485;
+      color: #FFF;
+      padding: 0% 0;
+      /* font-size: 1.2em; */
+      border: 0;
+    }
+    /* .navbar-brand { 
+      float: left;
+      min-height: 55px;
+      padding: 0 15px 5px;
+    } */
+    .navbar-inverse .navbar-nav .active a, 
+    .navbar-inverse .navbar-nav .active a:focus, 
+    .navbar-inverse .navbar-nav .active a:hover{
+      color:#FFF;
+      background-color: #5E4485;
+    }
+    .navbar-inverse .navbar-nav li a { 
+      color: #D5D5D5;
+    }
+    </style>
+  
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">  
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/']" style="color: white;"> <strong>Covoiturage App</strong></a>
+          </div>
+          <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/']" >Home</a></li>
+              <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/ajouter-traject']">Proposer un traject</a></li>
+              <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/trajects']">Mes trajects</a></li>
+              <li *ngIf="authService.loggedIn()"  [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/dashboard']" >Dashboard </a></li>
+              <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/profile']" >Profile</a></li>
+
+              <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/login']" >Login</a></li>
+              <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/register']" >Register</a></li>
+  
+              <li *ngIf="authService.loggedIn()" ><a (click)="onLogoutClick()"href="#" >Logout</a></li>  
+            </ul>
+          </div>
+            
+          
+        </div>
+
+      </nav>

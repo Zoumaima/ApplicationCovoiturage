@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="">
+      <div class="col-md-5">
+          <div class="form-area">
+              <form role="form" (submit)="onSaveSubmit()" >
+              <br style="clear:both">
+
+                          <h5 style="margin-bottom: 25px; text-align: center;"><u>D’où partez-vous ?</u></h5>
+
+
+                            <div class="form-group">
+                      <input [(ngModel)]="adresse_depart" name="adresse_depart" type="text" id="adresse_depart" placeholder="Adresse de Depart" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl1">
+                    </div>
+
+                    <div class="form-group">
+
+                              <input [(ngModel)]="villeD"  name="villeD" type="text" id="villeD" value="price to" readonly="readonly" placeholder="{{villeD}}" class="form-control" autofocus>
+                          </div>
+
+
+
+
+
+                  <h5 style="margin-bottom: 25px; text-align: center;"><u>Où allez-vous ?</u></h5>
+
+                  <div class="form-group">
+            <input [(ngModel)]="adresse_arrivee" name="adresse_arrivee" type="text" id="adresse_arrivee" placeholder="Adresse d'arrivée" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search2 [formControl]="searchControl2">
+            </div>
+            <div class="form-group">
+
+                    <input [(ngModel)]="villeA"  name="villeA" type="text" id="villeD"  readonly="readonly" placeholder="{{villeA}}" class="form-control" autofocus>
+                  </div>
+
+
+
+        <h5 style="margin-bottom: 25px; text-align: center;"><u>Quand partez vous ?</u></h5>
+          <div class="form-group">
+              <input [(ngModel)]="date_depart"  name="date_depart" type="date" id="date_depart" placeholder="Date de Depart" class="form-control" autofocus>
+          </div>
+
+          <div class="form-group">
+              <input [(ngModel)]="heure_depart"  name="heure_depart" type="time" id="date_depart" placeholder="Heure de Depart" class="form-control" autofocus>
+          </div>
+
+
+
+
+<h5 style="margin-bottom: 25px; text-align: center;"><u>Combien de places proposez vous ?</u></h5>
+<div class="form-group">
+    <input [(ngModel)]="nbr_place" min="1" name="nbr_place" type="number" id="nbr_place" placeholder="Nombre de place" class="form-control" autofocus>
+</div>
+
+
+<h5 style="margin-bottom: 25px; text-align: center;"><u>Prix par passager</u></h5>
+<div class="form-group">
+    <input [(ngModel)]="prix" min="0" name="prix" type="number" id="prix" placeholder="Prix" class="form-control" autofocus>
+</div>
+<h5 style="margin-bottom: 25px; text-align: center;"><u>Details du voyage</u></h5>
+<div class="form-group">
+    <textarea [(ngModel)]="description" rows="5"  name="description" type="textfield" id="description"  class="form-control" autofocus></textarea>
+</div>
+
+<div class="form-group">
+    <input [(ngModel)]="email" type="text" value="{{user.email}}" name="email" id="email" style="display: none;"/>
+</div>
+              <button type="submit" id="submit" name="submit" class="btn btn-primary pull-center">Enregistrer Traject</button>
+              </form>
+          </div>
+      </div>
+      <div class="col-md-7">
+        <agm-map [latitude]="latD" [longitude]="lngD" [scrollwheel]="false" [zoom]="zoom" zoom-to-include-markers="auto">
+        <agm-marker [latitude]="latD" [longitude]="lngD"></agm-marker>
+        <agm-marker [latitude]="latA" [longitude]="lngA"></agm-marker>
+
+      </agm-map>
+      </div>
+  </div>
+
+</div>

@@ -1,0 +1,67 @@
+<div class="container">
+            <form class="form-horizontal" role="form" (submit)="onRegisterSubmit()">
+
+                <div class="form-group">
+                    <label  class="col-sm-3 control-label">Nom</label>
+                    <div class="col-sm-9">
+                        <input [(ngModel)]="nom"  name="nom" type="text"  placeholder="Nom" class="form-control" autofocus>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label  class="col-sm-3 control-label">Prenom</label>
+                    <div class="col-sm-9">
+                        <input [(ngModel)]="prenom"  name="prenom" type="text"  placeholder="Prenom" class="form-control" autofocus>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label  class="col-sm-3 control-label">Age</label>
+                    <div class="col-sm-9">
+                        <input [(ngModel)]="age"  name="age" type="text"  placeholder="Age" class="form-control" autofocus>
+                    </div>
+                </div>
+
+
+
+                
+
+
+                
+
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">Adresse</label>
+                    <div class="col-sm-9">
+                        <input [(ngModel)]="adresse" name="adresse" type="text"  placeholder="numero, rue, ville, pays" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">Telephone</label>
+                    <div class="col-sm-9">
+                        <input [(ngModel)]="telephone" name="telephone" type="text"  placeholder="Tel." class="form-control" autofocus>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label  class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input [(ngModel)]="email" name="email" type="text"  placeholder="Email" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label  class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-9">
+                        <input [(ngModel)]="password" name="password" type="password"  placeholder="Password" class="form-control">
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    </div>
+                </div>
+            </form> 
+        </div> 

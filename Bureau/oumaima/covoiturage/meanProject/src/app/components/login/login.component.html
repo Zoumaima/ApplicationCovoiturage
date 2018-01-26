@@ -1,0 +1,29 @@
+
+
+<div class="container">
+            <form class="form-horizontal" role="form" (submit)="onLoginSubmit()">
+                <div class="form-group">
+                    <label  class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input [(ngModel)]="email"  name="email" type="text" id="firstName" placeholder="Nom" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label  class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-9">
+                        <input [(ngModel)]="password"  name="password" type="password" id="firstName" placeholder="Prenom" class="form-control" autofocus>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </div>
+                </div>
+
+
+
+            </form> <!-- /form -->
+        </div> <!-- ./container -->
